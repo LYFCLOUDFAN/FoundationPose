@@ -10,7 +10,7 @@
 from estimater import *
 from datareader import *
 import argparse
-
+ 
 
 if __name__=='__main__':
   parser = argparse.ArgumentParser()
@@ -71,7 +71,6 @@ if __name__=='__main__':
       vis = draw_xyz_axis(color, ob_in_cam=center_pose, scale=0.1, K=reader.K, thickness=3, transparency=0, is_input_rgb=True)
       cv2.imshow('1', vis[...,::-1])
       cv2.waitKey(1)
-
 
     if debug>=2:
       os.makedirs(f'{debug_dir}/track_vis', exist_ok=True)
